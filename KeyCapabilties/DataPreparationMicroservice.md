@@ -17,21 +17,21 @@ The DataLoader communicates with the Data Orchestrator, which in turn communicat
 All mail exchange servers, GDS, and existing interfaces (airline, hotel, and car rental) provide a subscription feature. This feature allows Road Warriors to retrieve updates on changes or updates in the source system based on the subscribed topics. Road Warriors will utilize the details received from the source systems, converting them into standardized, clean messages, and pushing them to a message queue. The TripAggregator will pick up these messages for further processing. Additionally, these updates are sent as complete events in the Cloud Event Streaming Service. The NotificationService and BigDataAnalyticsService consume these data update events.
 
 # Components
-InitialDataLoader
-Orchestrator
-EmailPoller
-ExternalDataSources
-Messaging Queue Cloud Service
-TripAggregator
-NoSQL DB Cloud Service
-MessageSubscriber
-Cache Cloud Service
-Event Stream Cloud Service
+- InitialDataLoader
+- Orchestrator
+- EmailPoller
+- ExternalDataSources
+- Messaging Queue Cloud Service
+- TripAggregator
+- NoSQL DB Cloud Service
+- MessageSubscriber
+- Cache Cloud Service
+- Event Stream Cloud Service
 
 
 # Architectural Choice
-Microservice
-Messaging Queue Cloud Service
-Event Stream Cloud Service
-NoSQL DB Cloud Service
+- Microservice
+- Messaging Queue Cloud Service
+- Event Stream Cloud Service
+- NoSQL DB Cloud Service
 
