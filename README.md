@@ -105,7 +105,10 @@ This strategic approach aligns with the project's objectives and forms the found
 
 ## The Architecture  
 
-* [General Architecture]() - the general architectural idea.  
+* [General Architecture]() -
+
+* ![Architecture-Diagram](https://github.com/beyond-blueprints/arch-katas-2023/assets/20838421/13371ad3-e679-4c43-8146-c2c71e3b8a8e)
+ 
 
 #### Individual Microservies Capabilities  
 
