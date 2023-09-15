@@ -78,6 +78,7 @@ Achieve a web response time of 800ms and a mobile first-contentful paint time of
 ##  Strategy
 
 In order to meet the stringent requirements of supporting 2 million active users per week and a total of 15 million users, our architectural approach centers around leveraging the power of Microservices, Cloud-based Services and an Event Driven Architecture. This strategy is fundamental to achieving the desired scalability, availability, and overall efficiency of the Road Warrior application.
+On the front-end application our approach is go with a responsive web app for MVP and then move to native mobile App for subsequent releases as this helps in faster time to market, saves budget and provides road warriors an opportunity to test the product with one channel.
 
 ### Key Benefits of the Strategy
 Scalability: Microservices and cloud based services enable seamless scaling of individual components, allowing us to handle the anticipated user base and growth without over-provisioning resources.
