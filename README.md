@@ -8,7 +8,7 @@
 
 
 # Overview
-The Next Generation Online Trip Management Dashboard is an ambitious project aimed at revolutionizing the way travelers manage their reservations and trips. This innovative platform empowers users to seamlessly organize and access their travel information, providing a comprehensive view of existing reservations with the latest updates on reservations. The goal is to deliver a sophisticated, user-centric interface accessible through both web and mobile devices, enhancing the travel experience for millions of users globally.
+The Road Warriors is an ambitious project aimed at revolutionizing the way travelers manage their reservations and trips. This innovative platform empowers users to seamlessly organize and access their travel information, providing a comprehensive view of existing reservations with the latest updates on reservations. The goal is to deliver a sophisticated, user-centric interface accessible through both web and mobile devices, enhancing the travel experience for millions of users globally.
 
 Authors:
 * [Bala Kolluru](https://www.linkedin.com/in/bala-subramanyam-kolluru-8592728a/)
@@ -19,7 +19,7 @@ Authors:
 # Scope and Objective
 The scope of this project encompasses the development of a highly responsive dashboard that aggregates travel reservations, allowing users to manage their trips effortlessly. The system will accommodate 15 million users and sustain an active user base of 2 million per week. It will seamlessly integrate with prominent travel industry interfaces, including SABRE and APOLLO, ensuring real-time updates on travel details. The dashboard will provide a visually engaging, user-friendly interface across all platforms. Additionally, it will offer end-of-year summary reports, revealing insightful metrics about travel usage.
 
-This document outlines the architectural, design, performance, integration, and security considerations that will shape the development and deployment of the Next Generation Online Trip Management Dashboard. By adhering to these guidelines, we aim to create a reliable, high-performance, and user-friendly platform that significantly elevates the travel experience for millions of users.
+This document outlines the architectural, design, performance, integration, and security considerations that will shape the development and deployment of the Road Warriors Dashboard. By adhering to these guidelines, we aim to create a reliable, high-performance, and user-friendly platform that significantly elevates the travel experience for millions of users.
 
 
 ## Business Requirements  
