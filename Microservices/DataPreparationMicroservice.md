@@ -31,9 +31,7 @@ All mail exchange servers, GDS, and existing interfaces (airline, hotel, and car
 
 # Architectural Choice
 - Microservice
-- Messaging Queue Cloud Service
-- Event Stream Cloud Service
-- NoSQL DB Cloud Service
 - Publisher/Subscribe Model for updates.
 - Service based integration for initial data setup
+- Cloud services
 

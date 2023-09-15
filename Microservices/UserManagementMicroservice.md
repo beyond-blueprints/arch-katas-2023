@@ -21,6 +21,6 @@ Upon user login or registration, an event will be promptly dispatched to the Eve
 
 # Architectural Choice
 - Microservice
-- Event Stream Cloud Service
-- SQL DB Cloud Service
+- Cloud services
+
 

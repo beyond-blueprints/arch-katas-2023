@@ -23,7 +23,7 @@ Serverless Functions will maintain DB records for the notifications which failed
 
 # Architectural Choice
 - Microservice
-- Messaging Queue Cloud Service
-- Cloud Notification Service
-- Relational DB Cloud Service
+- Cloud services
+- Event Driven Architecture
+
 
