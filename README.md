@@ -76,13 +76,13 @@ Achieve a web response time of 800ms and a mobile first-contentful paint time of
 
 ##  Strategy
 
-In order to meet the stringent requirements of supporting 2 million active users per week and a total of 15 million users, our architectural approach centers around leveraging the power of Microservices and Cloud-based Services. This strategy is fundamental to achieving the desired scalability, availability, and overall efficiency of the Road Warrior application.
+In order to meet the stringent requirements of supporting 2 million active users per week and a total of 15 million users, our architectural approach centers around leveraging the power of Microservices, Cloud-based Services and an Event Driven Architecture. This strategy is fundamental to achieving the desired scalability, availability, and overall efficiency of the Road Warrior application.
 
 ### Key Benefits of the Strategy
-Scalability: Microservices enable seamless scaling of individual components, allowing us to handle the anticipated user base and growth without over-provisioning resources.
+Scalability: Microservices and cloud based services enable seamless scaling of individual components, allowing us to handle the anticipated user base and growth without over-provisioning resources.
 
 #### Resilience and Availability: 
-Cloud-based services ensure high availability, fault tolerance, and disaster recovery capabilities, minimizing downtime and enhancing user satisfaction.
+Event-Driven Architecture enhances system resilience by allowing services to independently react to events, reducing dependencies and potential failure points. Combined with cloud-based services, this ensures high availability, fault tolerance, and disaster recovery capabilities.
 
 #### Flexibility and Agility: 
 The combination of microservices and the cloud grants us the agility to update, deploy, and manage services independently, facilitating faster development cycles and adaptability to evolving requirements.
@@ -93,6 +93,11 @@ By leveraging cloud resources, we optimize costs through efficient resource allo
 This strategic approach aligns with the project's objectives and forms the foundation of our architectural design. It positions us to efficiently accommodate the targeted user base while providing a highly available and responsive Road Warrior Dashboard.
 
 ## Assumptions
+
+- Road Warrior is not a booking agency. It provides the dashboard and notifications to the users.
+- System will collect user's identity information like Passport Numer, any local identifiers that can b used to fetch the trip information.
+- System will only show future events.
+- All data sources support Pub/Sub model for updates and Road Warriors will subscribe to those updates.
 
 
 
