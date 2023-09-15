@@ -33,5 +33,5 @@ All mail exchange servers, GDS, and existing interfaces (airline, hotel, and car
 - Microservice
 - Publisher/Subscribe Model for updates.
 - Service based integration for initial data setup
-- Cloud services
+- Cloud Services
 
