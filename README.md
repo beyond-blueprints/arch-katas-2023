@@ -11,7 +11,7 @@
 The Next Generation Online Trip Management Dashboard is an ambitious project aimed at revolutionizing the way travelers manage their reservations and trips. This innovative platform empowers users to seamlessly organize and access their travel information, providing a comprehensive view of existing reservations with the latest updates on reservations. The goal is to deliver a sophisticated, user-centric interface accessible through both web and mobile devices, enhancing the travel experience for millions of users globally.
 
 Authors:
-* [Bala Kolluru](https://www.linkedin.com/in/saurabh-sethia-13n/)
+* [Bala Kolluru](https://www.linkedin.com/in/bala-subramanyam-kolluru-8592728a/)
 * [Saurabh Sethia](https://www.linkedin.com/in/saurabh-sethia-13n/)
 * [Bala SP](https://www.linkedin.com/in/balasubramanyasp/)
 * [Varun Jain](https://www.linkedin.com/in/varun-jain-1654b236/)
