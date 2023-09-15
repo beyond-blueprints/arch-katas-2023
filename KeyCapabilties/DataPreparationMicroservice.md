@@ -3,16 +3,35 @@
 
 # Capability and Solution Description
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed dapibus nunc id orci tristique, at lacinia elit feugiat. Fusce tincidunt, risus eget lacinia venenatis, justo lectus tempus est, id euismod purus libero nec purus. Sed at congue nulla. Vestibulum vestibulum risus in nunc bibendum, vel faucibus justo vestibulum. Suspendisse potenti. Vivamus id felis quis quam dictum posuere. Nulla facilisi. Duis ullamcorper a libero sit amet euismod.
+The Initial Data Loader sets up trip data for a user immediately after registration. The system notifies the user that their data is being synchronized across various systems and will be ready on the dashboard within a few minutes.
 
-# Components
+The DataLoader communicates with the Data Orchestrator, which in turn communicates with various systems such as GDS (Apollo/SABRE), existing airline, hotel, and car rental interfaces. It also polls whitelisted emails to gather booking details data, applying appropriate filters. This service-based data fetching occurs only during the initial data setup after a user registers. Once the data is fetched, it is moved into a message channel cloud service. A serverless aggregator reads the message groups from the queue and updates the trip data for that customer in the NoSQL Cluster on the Cloud.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed dapibus nunc id orci tristique, at lacinia elit feugiat. Fusce tincidunt, risus eget lacinia venenatis, justo lectus tempus est, id euismod purus libero nec purus. Sed at congue nulla. Vestibulum vestibulum risus in nunc bibendum, vel faucibus justo vestibulum. Suspendisse potenti. Vivamus id felis quis quam dictum posuere. Nulla facilisi. Duis ullamcorper a libero sit amet euismod.
+
+
+![Data Updates](https://github.com/beyond-blueprints/arch-katas-2023/blob/main/Diagrams/IndividualComponentDiagrams/DataUpdatesConsumer.drawio.png)
+
 
 # Architectural Characteristics
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed dapibus nunc id orci tristique, at lacinia elit feugiat. Fusce tincidunt, risus eget lacinia venenatis, justo lectus tempus est, id euismod purus libero nec purus. Sed at congue nulla. Vestibulum vestibulum risus in nunc bibendum, vel faucibus justo vestibulum. Suspendisse potenti. Vivamus id felis quis quam dictum posuere. Nulla facilisi. Duis ullamcorper a libero sit amet euismod.
+All mail exchange servers, GDS, and existing interfaces (airline, hotel, and car rental) provide a subscription feature. This feature allows Road Warriors to retrieve updates on changes or updates in the source system based on the subscribed topics. Road Warriors will utilize the details received from the source systems, converting them into standardized, clean messages, and pushing them to a message queue. The TripAggregator will pick up these messages for further processing. Additionally, these updates are sent as complete events in the Cloud Event Streaming Service. The NotificationService and BigDataAnalyticsService consume these data update events.
+
+# Components
+InitialDataLoader
+Orchestrator
+EmailPoller
+ExternalDataSources
+Messaging Queue Cloud Service
+TripAggregator
+NoSQL DB Cloud Service
+MessageSubscriber
+Cache Cloud Service
+Event Stream Cloud Service
+
 
 # Architectural Choice
+Microservice
+Messaging Queue Cloud Service
+Event Stream Cloud Service
+NoSQL DB Cloud Service
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed dapibus nunc id orci tristique, at lacinia elit feugiat. Fusce tincidunt, risus eget lacinia venenatis, justo lectus tempus est, id euismod purus libero nec purus. Sed at congue nulla. Vestibulum vestibulum risus in nunc bibendum, vel faucibus justo vestibulum. Suspendisse potenti. Vivamus id felis quis quam dictum posuere. Nulla facilisi. Duis ullamcorper a libero sit amet euismod.
