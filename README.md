@@ -108,9 +108,13 @@ This strategic approach aligns with the project's objectives and forms the found
 * [General Architecture]() -
 
 * ![Architecture-Diagram](https://github.com/beyond-blueprints/arch-katas-2023/assets/20838421/13371ad3-e679-4c43-8146-c2c71e3b8a8e)
-* Architecture Components:
+  
+** Architecture Components**:
 * **Content Delivery Network(CDN)** : Content Delivery Network (CDN) accelerates content delivery by caching and distributing assets like images and static files to geographically dispersed servers. This reduces latency, enhances user experience, and ensures fast loading times for travelers accessing the app from various locations.In addition to performance benefits, a CDN for the Road Warrior App also enhances security by providing DDoS protection, web application firewalls, and SSL/TLS encryption, safeguarding user data and preventing malicious attacks at the network edge.
 * **API Gateway** : API Gateway serves as a central entry point, managing and routing all external and internal API requests. It streamlines communication, enforces security measures, and provides load balancing, ensuring efficient and secure interactions between microservices while simplifying access for clients.
+* **Microservices**: Application is divided into following microservices:
+* **Microservices Communication Patterns **:
+*** Cross Cutting Concerns**:
  
 
 #### Individual Microservies Capabilities  
