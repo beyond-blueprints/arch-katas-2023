@@ -7,7 +7,7 @@
 ## Introduction
 
 
-# Overview
+### Overview
 The Road Warriors is an ambitious project aimed at revolutionizing the way travelers manage their reservations and trips. This innovative platform empowers users to seamlessly organize and access their travel information, providing a comprehensive view of existing reservations with the latest updates on reservations. The goal is to deliver a sophisticated, user-centric interface accessible through both web and mobile devices, enhancing the travel experience for millions of users globally.
 
 Authors:
@@ -16,13 +16,13 @@ Authors:
 * [Bala SP](https://www.linkedin.com/in/balasubramanyasp/)
 * [Varun Jain](https://www.linkedin.com/in/varun-jain-1654b236/)
 
-# Scope and Objective
+### Scope and Objective
 The scope of this project encompasses the development of a highly responsive dashboard that aggregates travel reservations, allowing users to manage their trips effortlessly. The system will accommodate 15 million users and sustain an active user base of 2 million per week. It will seamlessly integrate with prominent travel industry interfaces, including SABRE and APOLLO, ensuring real-time updates on travel details. The dashboard will provide a visually engaging, user-friendly interface across all platforms. Additionally, it will offer end-of-year summary reports, revealing insightful metrics about travel usage.
 
 This document outlines the architectural, design, performance, integration, and security considerations that will shape the development and deployment of the Road Warriors Dashboard. By adhering to these guidelines, we aim to create a reliable, high-performance, and user-friendly platform that significantly elevates the travel experience for millions of users.
 
 
-## Business Requirements  
+### Business Requirements  
 
 #### Create an Online Trip Management Dashboard:
 Develop a web-based application to facilitate trip management, allowing users to organize and oversee their travel plans effectively.
@@ -73,6 +73,7 @@ Display travel updates within the application promptly, aiming for a maximum del
 Achieve a web response time of 800ms and a mobile first-contentful paint time of under 1.4 seconds to enhance user experience and engagement.
 
 
+# Architecture
 
 ##  Strategy
 
@@ -101,17 +102,16 @@ This strategic approach aligns with the project's objectives and forms the found
 
 
 
-
 ## The Architecture  
 
 * [General Architecture]() - the general architectural idea.  
 
 #### Individual Microservies Capabilities  
 
-* [TripMicroservice]()
-* [NotificationMicroservice](./Key%20Capabilities/Card%20and%20Payment.md)
-* [UserManagementMicroservice](./Key%20Capabilities/Identity%20and%20Profile.md)  
-* [DataOrchestratorMicroservice](./Key%20Capabilities/Kitchens.md)
+* [TripMicroservice](./IndividualMicroservices/TripMicroservice.md)
+* [NotificationMicroservice](./IndividualMicroservices/NotificationMicroservice.md)
+* [UserManagementMicroservice](./IndividualMicroservices/UserManagementMicroservice.md)  
+* [DataOrchestratorMicroservice](./IndividualMicroservices/DataPreparationMicroservice.md)
 
 ## Architectural Desision Records (ADRs)  
 
