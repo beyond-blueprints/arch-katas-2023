@@ -6,7 +6,8 @@ ACCEPTED
 
 ## Context
 
-The advantages of a mobile application are significant in providing the richest and optimized experience to the user beyond the capabilities of a web browser. However, the development of a native mobile application poses a challenge, necessitating the formation of an additional team proficient in native languages for various platforms. This would incur supplementary costs and impact overall time of  the project, which warrants careful consideration in aligning with project objectives and budget constraints.
+The advantages of a mobile application are significant in providing the richest and optimized experience to the user beyond the capabilities of a web browser. However, the development of a native mobile application poses a challenge, necessitating the formation of an additional team proficient in native languages for various platforms. This would incur supplementary costs and impact overall time of the project, which warrants careful consideration in aligning with project objectives and budget constraints.
+Our approach is to move to native mobile App for subsequent releases as this helps in faster time to market, saves budget and provides road warriors an opportunity to test the product with one channel.
 
 ### Decision
 
