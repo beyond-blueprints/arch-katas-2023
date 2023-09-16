@@ -8,10 +8,6 @@
 
 # Components
 - Data Lakehouse
-- IDP
-- UserProfileService
-- UserConsentManagementService
-- SQL DB Cloud Service
 
 
 # Architectural Choice
