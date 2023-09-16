@@ -113,20 +113,20 @@ This strategic approach aligns with the project's objectives and forms the found
 * **Content Delivery Network(CDN)** : Content Delivery Network (CDN) accelerates content delivery by caching and distributing assets like images and static files to geographically dispersed servers. This reduces latency, enhances user experience, and ensures fast loading times for travelers accessing the app from various locations.In addition to performance benefits, a CDN for the Road Warrior App also enhances security by providing DDoS protection, web application firewalls, and SSL/TLS encryption, safeguarding user data and preventing malicious attacks at the network edge.
 * **API Gateway** : API Gateway serves as a central entry point, managing and routing all external and internal API requests. It streamlines communication, enforces security measures, and provides load balancing, ensuring efficient and secure interactions between microservices while simplifying access for clients.
 * **Microservices**: Application is divided into following microservices:
-    **User Management Microservice** :
+   * **User Management Microservice** :
     Manages user profiles, authentication, and preferences, ensuring secure access and personalization for travelers.
     Database: Stores user data for authentication and customization.
-    **Trip Management Microservice**:
+   * **Trip Management Microservice**:
     Organizes and updates trip reservations, enabling travelers to view and manage their itineraries seamlessly.
     Database: Manages trip data, including reservations, trip details, and user associations.
-    **Third-Party and Email Integrations Microservice**:
+   * **Third-Party and Email Integrations Microservice**:
     Interfaces with airlines, hotels, and car rental systems to provide real-time updates and sync travel details.
     Polls and subscribes to email updates to scan travel related mails.
     Subscribes to regular updates from 3rd party systems through a queue and publishes the updates to topic that is fan out to all the other microservice queues for updates.
-    **Notification Microservice** :
+   * **Notification Microservice** :
     Handles user notifications, allowing customization of alerts and updates for travelers.
     Supports SMS, Email and Push notifications.
-    **Reporting & Analytics Microservice**:
+   * **Reporting & Analytics Microservice**:
     Generates end-of-year summary reports with various travel metrics and insights for users.
     Gathers analytical data from trips to provide insights, trends, and end-of-year summary reports for users.
     Lakehouse: Syncs data in batch mode from Travel and User Management databases. Also consumes events from third-party integration service.
