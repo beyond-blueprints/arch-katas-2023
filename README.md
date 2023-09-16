@@ -113,10 +113,38 @@ This strategic approach aligns with the project's objectives and forms the found
 * **Content Delivery Network(CDN)** : Content Delivery Network (CDN) accelerates content delivery by caching and distributing assets like images and static files to geographically dispersed servers. This reduces latency, enhances user experience, and ensures fast loading times for travelers accessing the app from various locations.In addition to performance benefits, a CDN for the Road Warrior App also enhances security by providing DDoS protection, web application firewalls, and SSL/TLS encryption, safeguarding user data and preventing malicious attacks at the network edge.
 * **API Gateway** : API Gateway serves as a central entry point, managing and routing all external and internal API requests. It streamlines communication, enforces security measures, and provides load balancing, ensuring efficient and secure interactions between microservices while simplifying access for clients.
 * **Microservices**: Application is divided into following microservices:
-* **Microservices Communication Patterns **:
-*** Cross Cutting Concerns**:
- 
+    **User Management Microservice** :
+    Manages user profiles, authentication, and preferences, ensuring secure access and personalization for travelers.
+    Database: Stores user data for authentication and customization.
+    **Trip Management Microservice**:
+    Organizes and updates trip reservations, enabling travelers to view and manage their itineraries seamlessly.
+    Database: Manages trip data, including reservations, trip details, and user associations.
+    **Third-Party and Email Integrations Microservice**:
+    Interfaces with airlines, hotels, and car rental systems to provide real-time updates and sync travel details.
+    Polls and subscribes to email updates to scan travel related mails.
+    Subscribes to regular updates from 3rd party systems through a queue and publishes the updates to topic that is fan out to all the other microservice queues for updates.
+    **Notification Microservice** :
+    Handles user notifications, allowing customization of alerts and updates for travelers.
+    Supports SMS, Email and Push notifications.
+    **Reporting & Analytics Microservice**:
+    Generates end-of-year summary reports with various travel metrics and insights for users.
+    Gathers analytical data from trips to provide insights, trends, and end-of-year summary reports for users.
+    Lakehouse: Syncs data in batch mode from Travel and User Management databases. Also consumes events from third-party integration service.
 
+* **Microservices Communication Patterns** :
+    **API based**: Microservices can communicate with each other over REST API for any synchronous communication needs.
+    **Publish-Subscribe**: Microservices will utilize Pub/Sub communication for any asynchronous communication needs.For example as soon as a user registers, user management                                 service can publish a user registereted event that will notify the third-party integration service to collect data for the user to setup the dashboard.
+    **Batch Processing**: Microservices will trigger batch jobs or long-running processes asynchronously. For example, analytics and reporting service will sync data using a                                batch process from user management and trip management databases.
+    
+    **WebSockets for Real-Time Communication**: Microservices will utilize bidirectional,persistent connection for real-time updates and interactive features. This can be                                                         utilized to trigger any critical travel updates to user's dashboard.
+* **Cross Cutting Concerns**:
+     **API Contracts and Documentation**: Application will maintain API contracts and documentation using tools like OpenAPI (Swagger), GraphQL schemas.
+     **API Versioning**: Application will implement versioning for the APIs to ensure backward compatibility when making changes and will avoid breaking changes that can disrupt                           communication between services.
+     **Authentication and Authorization**: Application will ensure that interservice API calls are secure by implementing proper authentication and authorization mechanisms.                                                 OAuth 2.0 or token-based authentication will be used.It will define access control policies to restrict access to specific endpoints or                                            actions.
+     **Monitoring and Logging**: Application will implement robust monitoring and logging for API calls to track performance, errors, and usage patterns. It will use centralized                                   logging and monitoring tools to gain insights into your microservices architecture.
+     **Data Encryption** : Application will encrypt all data at rest using encryption mechanisms supported by database solutions  and in-transit using HTTPS protocol.
+                           Application will taken utmost care in dealing with any PII or sensitive data and will adhere to all local compliances like GDPR,CCPA etc.
+    
 #### Individual Microservies Capabilities  
 
 * [TripMicroservice](./IndividualMicroservices/TripMicroservice.md)
