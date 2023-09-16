@@ -13,4 +13,4 @@ When user lands on dashboard the trip data is to be served to the user reading f
 Given the contextual requirements, a NoSQL database offers the necessary capabilities to fulfill the application's needs, providing a highly scalable, flexible, and highly available database system with efficient read and write performance.
 
 ### Consequences
-- Eventually Consistent Systems due to the distributed nature of NoSQL  databases. Highly available and faster read/write performance. If there is a need for an occasional complex queries during development then team can will have to work on optimizing it.
+- Eventually Consistent Systems due to the distributed nature of NoSQL  databases. Highly available and faster read/write performance. If there is a need for an occasional complex queries during development then team will have to work on optimizing it.
