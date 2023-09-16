@@ -10,7 +10,7 @@ Need to make a critical architectural decision regarding how system will handle 
 
 ### Decision
 
-Event Driven Architecture and publisher/subscribe model to be followed primarily to address data updates and notifications. Services to be used only when necessary like to fetch data for the user just logged in for prepare dataset for the user who just registered etc.
+Event Driven Architecture and publisher/subscribe model to be followed primarily to address data updates and notifications. Services to be used only when necessary like to fetch data for the user just logged in for prepare dataset for the user who just registered etc. Microservices would also publish events onto event stream for others microservices to subscribe to.
 
 ### Consequences
 - Real Time Updates
