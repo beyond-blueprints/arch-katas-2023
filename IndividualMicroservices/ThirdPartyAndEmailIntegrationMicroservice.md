@@ -1,5 +1,5 @@
 
-![Initial Data Loader](https://github.com/beyond-blueprints/arch-katas-2023/blob/main/Diagrams/IndividualComponentDiagrams/InitialDataLoader.drawio.png)
+![Initial Data Loader](./../Diagrams/IndividualComponentDiagrams/InitialDataLoader.drawio.png)
 
 # Capability and Solution Description
 
@@ -9,7 +9,7 @@ The DataLoader communicates with the Data Orchestrator, which in turn communicat
 
 
 
-![Data Updates](https://github.com/beyond-blueprints/arch-katas-2023/blob/main/Diagrams/IndividualComponentDiagrams/DataUpdatesConsumer.drawio.png)
+![Data Updates](./../Diagrams/IndividualComponentDiagrams/DataUpdatesConsumer.drawio.png)
 
 
 # Architectural Characteristics

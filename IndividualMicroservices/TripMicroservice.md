@@ -1,5 +1,5 @@
 
-![Initial Data Loader](https://github.com/beyond-blueprints/arch-katas-2023/blob/main/Diagrams/IndividualComponentDiagrams/TripService.drawio.png)
+![Initial Data Loader](./../Diagrams/IndividualComponentDiagrams/TripService.drawio.png)
 
 # Capability and Solution Description
 
