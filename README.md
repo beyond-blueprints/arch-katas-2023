@@ -107,7 +107,7 @@ This strategic approach aligns with the project's objectives and forms the found
 
 * [General Architecture]() -
 
- ![Road-Warrior-Architecture-Diagram](https://github.com/beyond-blueprints/arch-katas-2023/assets/20838421/40993ea1-d49a-42d6-81f3-47820731e4dc)
+ ![Road-Warrior-Architecture-Diagram](Diagrams/ArchitectureDiagram.jpg)
 
   
 * **Architecture Components**:
@@ -151,8 +151,10 @@ This strategic approach aligns with the project's objectives and forms the found
 * [TripMicroservice](./IndividualMicroservices/TripMicroservice.md)
 * [NotificationMicroservice](./IndividualMicroservices/NotificationMicroservice.md)
 * [UserManagementMicroservice](./IndividualMicroservices/UserManagementMicroservice.md)  
-* [DataOrchestratorMicroservice](./IndividualMicroservices/DataPreparationMicroservice.md)
+* [ThirdPartyAndEmailIntegrationMicroservice](./IndividualMicroservices/ThirdPartyAndEmailIntegrationMicroservice.md)
+* [ReportingAndAnalyticsMicroservice](./IndividualMicroservices/ReportingAndAnalyticsMicroservice.md)
+
 
 ## Architectural Desision Records (ADRs)  
 
-You can find the key Architectural Decision Records [here]()  
+You can find the key Architectural Decision Records [here](./ADR/)  
