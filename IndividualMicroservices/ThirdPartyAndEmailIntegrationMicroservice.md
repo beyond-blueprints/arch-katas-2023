@@ -14,17 +14,15 @@ The Data Orchestrator picks up the event data from the queue, which in turn comm
 
 # Architectural Characteristics
 
-All mail exchange servers, GDS, and existing interfaces (airline, hotel, and car rental) provide a subscription feature. This feature allows Road Warriors to retrieve updates on changes or updates in the source system based on the subscribed topics. Road Warriors will utilize the details received from the source systems, converting them into standardized, clean messages, and pushing them to a message queue. The TripAggregator will pick up these messages for further processing. Additionally, these updates are sent as complete events in the Cloud Event Streaming Service. The NotificationService and BigDataAnalyticsService consume these data update events. Such a pubsib model will make sure the data flows into Road Warriors as soon as there is an update in the source system and TripAggregator will update the NoSQL DB. UI will be served from this DB. 
+All mail exchange servers, GDS, and existing interfaces (airline, hotel, and car rental) provide a subscription feature. This feature allows Road Warriors to retrieve updates on changes or updates in the source system based on the subscribed topics. Road Warriors will consume the details received from the source systems and pushing them to a message queue. The TripAggregator will pick up these messages for further processing. Additionally, these updates are sent as complete autonomous events in the Cloud Event Streaming Service. The NotificationService and ReportingAndAnalyticsMicroservice consume these data update events. Such a pubsub model will make sure the data flows into Road Warriors as soon as there is an update in the source system and TripAggregator will invoke TripMicroservice API to update the Trip NoSQL DB.
 
 # Components
-- InitialDataLoader
 - Orchestrator
 - EmailPoller
 - ExternalDataSources
 - Messaging Queue Cloud Service
 - TripAggregator
 - NoSQL DB Cloud Service
-- MessageSubscriber
 - Cache Cloud Service
 - Event Stream Cloud Service
 
