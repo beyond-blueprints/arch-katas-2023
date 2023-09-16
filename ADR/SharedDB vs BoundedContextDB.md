@@ -1,4 +1,4 @@
-# Native App vs PWA
+# SharedDB vs BoundedContextDB
 
 ## Status
 
