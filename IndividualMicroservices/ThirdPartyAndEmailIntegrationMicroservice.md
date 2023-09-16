@@ -3,9 +3,9 @@
 
 # Capability and Solution Description
 
-The Initial Data Loader sets up trip data for a user immediately after registration. The system notifies the user that their data is being synchronized across various systems and will be ready on the dashboard within a few minutes.
+As soon as the customer registers, UserManagementMicroservice would push an event onto Event streaming service. The ThirdPartyAndEmailIntegrationMicroservice message queue will consume those events and start teh preparation of the initial setup of user data. The system will notify the user that their data is being synchronized across various systems and will be ready on the dashboard within a few minutes.
 
-The DataLoader communicates with the Data Orchestrator, which in turn communicates with various systems such as GDS (Apollo/SABRE), existing airline, hotel, and car rental interfaces. It also polls whitelisted emails to gather booking details data, applying appropriate filters. This service-based data fetching occurs only during the initial data setup after a user registers. Once the data is fetched, it is moved into a message channel cloud service. A serverless aggregator reads the message groups from the queue and updates the trip data for that customer in the NoSQL Cluster on the Cloud. 
+The Data Orchestrator picks up the event data from the queue, which in turn communicates with various systems such as GDS (Apollo/SABRE), existing airline, hotel, and car rental interfaces. It also polls whitelisted emails to gather booking details data, applying appropriate filters. This service-based data fetching occurs only during the initial data setup after a user registers. Once the data is fetched, it is moved into a message channel cloud service. A serverless aggregator reads the message groups from the queue and invokes APIs of Trip Microservice to update the trip data for that customer in the NoSQL Cluster on the Cloud. 
 
 
 

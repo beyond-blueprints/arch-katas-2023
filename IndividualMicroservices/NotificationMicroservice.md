@@ -5,15 +5,14 @@
 
 The NotificationMicroservice is tasked with providing timely updates to customers regarding any changes within the source system. These updates encompass various aspects, including flight delays, gate changes, and more.
 
-All update events, pushed by the MessageSubscriber Component of the DataPreparationMicroservice to the Event Streaming Cloud Service, will be consumed by this microservice.
+Events which requires system to send a notification such as registration, reservervation updates etc would be pushed onto the Event Streaming Cloud Service. These events will be subscribed by this microservice and will consume those once published to send notifications real-time.
 
-The Consumer Component will process the event, converting it into a standardized message structure before pushing it onto the message queue. Serverless Lambda Functions will then retrieve these messages from the queue and interface with a cloud-based Notification Service. This Notification Service will send notifications to the user via SMS, email, and push notifications.
+The events will be consumed by a queue. Serverless Lambda Functions will then retrieve these messages from the queue and interface with a cloud-based Notification Service. This Notification Service will send notifications to the user via SMS, email, and push notifications.
 
 Serverless Functions will maintain DB records for the notifications which failed and FailedNotificationScheduledJob will pick those up and push it the queue again.
 
 
 # Components
-- EventConsumer
 - Messaging Queue Cloud Service
 - Serverless Functions On Cloud
 - FailedNotificationScheduledJob
