@@ -107,7 +107,7 @@ This strategic approach aligns with the project's objectives and forms the found
 
 * [General Architecture]() -
 
-* ![Architecture-Diagram] ![Road-Warrior-Architecture-Diagram](https://github.com/beyond-blueprints/arch-katas-2023/assets/20838421/40993ea1-d49a-42d6-81f3-47820731e4dc)
+ ![Road-Warrior-Architecture-Diagram](https://github.com/beyond-blueprints/arch-katas-2023/assets/20838421/40993ea1-d49a-42d6-81f3-47820731e4dc)
 
   
 ** Architecture Components**:
