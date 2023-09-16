@@ -97,15 +97,14 @@ This strategic approach aligns with the project's objectives and forms the found
 ## Assumptions
 
 - Road Warrior is not a booking agency. It provides the dashboard and notifications to the users.
-- System will collect user's identity information like Passport Numer, any local identifiers that can b used to fetch the trip information.
+- System will collect user's identity information like Passport Number, any local identifiers that can be used to fetch the trip information.
 - System will only show future events.
-- All data sources support Pub/Sub model for updates and Road Warriors will subscribe to those updates.
-
+- All data sources support Pub/Sub model for updates and Road Warriors will subscribe to those updates to get real time updates.
 
 
 ## The Architecture  
 
-* [General Architecture]() -
+* [General Architecture]()
 
  ![Road-Warrior-Architecture-Diagram](Diagrams/ArchitectureDiagram.jpg)
 
