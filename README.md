@@ -107,7 +107,8 @@ This strategic approach aligns with the project's objectives and forms the found
 
 * [General Architecture]() -
 
-* ![Architecture-Diagram](https://github.com/beyond-blueprints/arch-katas-2023/assets/20838421/13371ad3-e679-4c43-8146-c2c71e3b8a8e)
+* ![Architecture-Diagram] ![Road-Warrior-Architecture-Diagram](https://github.com/beyond-blueprints/arch-katas-2023/assets/20838421/40993ea1-d49a-42d6-81f3-47820731e4dc)
+
   
 ** Architecture Components**:
 * **Content Delivery Network(CDN)** : Content Delivery Network (CDN) accelerates content delivery by caching and distributing assets like images and static files to geographically dispersed servers. This reduces latency, enhances user experience, and ensures fast loading times for travelers accessing the app from various locations.In addition to performance benefits, a CDN for the Road Warrior App also enhances security by providing DDoS protection, web application firewalls, and SSL/TLS encryption, safeguarding user data and preventing malicious attacks at the network edge.
