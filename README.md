@@ -132,17 +132,17 @@ This strategic approach aligns with the project's objectives and forms the found
     Lakehouse: Syncs data in batch mode from Travel and User Management databases. Also consumes events from third-party integration service.
 
 * **Microservices Communication Patterns** :
-    **API based**: Microservices can communicate with each other over REST API for any synchronous communication needs.
-    **Publish-Subscribe**: Microservices will utilize Pub/Sub communication for any asynchronous communication needs.For example as soon as a user registers, user management                                 service can publish a user registereted event that will notify the third-party integration service to collect data for the user to setup the dashboard.
-    **Batch Processing**: Microservices will trigger batch jobs or long-running processes asynchronously. For example, analytics and reporting service will sync data using a                                batch process from user management and trip management databases.
+   * **API based**: Microservices can communicate with each other over REST API for any synchronous communication needs.
+   * **Publish-Subscribe**: Microservices will utilize Pub/Sub communication for any asynchronous communication needs.For example as soon as a user registers, user management                                 service can publish a user registereted event that will notify the third-party integration service to collect data for the user to setup the dashboard.
+   * **Batch Processing**: Microservices will trigger batch jobs or long-running processes asynchronously. For example, analytics and reporting service will sync data using a                                batch process from user management and trip management databases.
     
-    **WebSockets for Real-Time Communication**: Microservices will utilize bidirectional,persistent connection for real-time updates and interactive features. This can be                                                         utilized to trigger any critical travel updates to user's dashboard.
+   * **WebSockets for Real-Time Communication**: Microservices will utilize bidirectional,persistent connection for real-time updates and interactive features. This can be                                                         utilized to trigger any critical travel updates to user's dashboard.
 * **Cross Cutting Concerns**:
-     **API Contracts and Documentation**: Application will maintain API contracts and documentation using tools like OpenAPI (Swagger), GraphQL schemas.
-     **API Versioning**: Application will implement versioning for the APIs to ensure backward compatibility when making changes and will avoid breaking changes that can disrupt                           communication between services.
-     **Authentication and Authorization**: Application will ensure that interservice API calls are secure by implementing proper authentication and authorization mechanisms.                                                 OAuth 2.0 or token-based authentication will be used.It will define access control policies to restrict access to specific endpoints or                                            actions.
-     **Monitoring and Logging**: Application will implement robust monitoring and logging for API calls to track performance, errors, and usage patterns. It will use centralized                                   logging and monitoring tools to gain insights into your microservices architecture.
-     **Data Encryption** : Application will encrypt all data at rest using encryption mechanisms supported by database solutions  and in-transit using HTTPS protocol.
+    * **API Contracts and Documentation**: Application will maintain API contracts and documentation using tools like OpenAPI (Swagger), GraphQL schemas.
+    * **API Versioning**: Application will implement versioning for the APIs to ensure backward compatibility when making changes and will avoid breaking changes that can disrupt                           communication between services.
+    * **Authentication and Authorization**: Application will ensure that interservice API calls are secure by implementing proper authentication and authorization mechanisms.                                                 OAuth 2.0 or token-based authentication will be used.It will define access control policies to restrict access to specific endpoints                                               or actions.
+    * **Monitoring and Logging**: Application will implement robust monitoring and logging for API calls to track performance, errors, and usage patterns. It will use centralized                                   logging and monitoring tools to gain insights into your microservices architecture.
+    * **Data Encryption** : Application will encrypt all data at rest using encryption mechanisms supported by database solutions  and in-transit using HTTPS protocol.
                            Application will taken utmost care in dealing with any PII or sensitive data and will adhere to all local compliances like GDPR,CCPA etc.
     
 #### Individual Microservies Capabilities  
